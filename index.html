@@ -665,6 +665,11 @@ function simUpdate() {
   const fill = document.getElementById('be-fill');
   fill.style.width      = pct + '%';
   fill.style.background = utile >= 0 ? 'var(--green)' : 'var(--red)';
+  // Coda barra: colore tenue coerente con l'utile
+  const beBar = document.querySelector('.be-bar');
+  if (utile > 5000)       beBar.style.background = '#d8e89a'; // verde tenue
+  else if (utile >= 0)    beBar.style.background = '#fde8b0'; // arancione tenue
+  else                    beBar.style.background = '#fdd5de'; // rosso tenue
   // Il marcatore BE è calcolato sul ricavo corrispondente al BE:
   // ricavo_BE = beContrs × RICAVO_IDON
   const beRev = beContrs * RICAVO_IDON;
