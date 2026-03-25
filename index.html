@@ -129,6 +129,8 @@ hr.div { border: none; border-top: 1px solid var(--border); margin: 26px 0; }
 /* ── TABELLE ── */
 .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .data-table th { text-align: left; font-size: 10px; font-weight: 600; color: #ffffff; text-transform: uppercase; letter-spacing: .07em; padding: 9px 10px; border-bottom: none; background: #0f507b; white-space: nowrap; }
+.data-table thead tr th:first-child { border-radius: 8px 0 0 8px; }
+.data-table thead tr th:last-child  { border-radius: 0 8px 8px 0; }
 .data-table td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
 .data-table tr:last-child td { border-bottom: none; }
 .data-table tr:hover td { background: rgba(255,255,255,.015); }
