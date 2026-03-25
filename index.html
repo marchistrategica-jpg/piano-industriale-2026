@@ -680,7 +680,7 @@ function simUpdate() {
   const diff = contratti - beContrs;
   document.getElementById('contr-msg').innerHTML = diff >= 0
     ? `<span style="color:var(--green);font-weight:700;font-size:15px">+${diff} contratti sopra il break-even</span>`
-    : `<span style="color:var(--red)">${Math.abs(diff)} contratti mancanti al break-even</span>`;
+    : `<span style="color:var(--red);font-weight:700;font-size:15px">${Math.abs(diff)} contratti mancanti al break-even</span>`;
 }
 
 
