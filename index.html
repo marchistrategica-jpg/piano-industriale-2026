@@ -109,24 +109,26 @@ body {
 .kpi-row.c3 { grid-template-columns: repeat(3,1fr); }
 .kpi-row.c2 { grid-template-columns: repeat(2,1fr); }
 .kpi { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r); padding: 14px 16px; }
-.kpi.ok   { border-top: 2px solid var(--green); }
-.kpi.warn { border-top: 2px solid var(--amber); }
-.kpi.info { border-top: 2px solid var(--blue);  }
 .kpi-label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .09em; margin-bottom: 7px; }
 .kpi-value { font-family: var(--mono); font-size: 22px; font-weight: 500; color: var(--blue); }
-.kpi.ok   .kpi-value { color: var(--green); }
-.kpi.warn .kpi-value { color: var(--amber); }
-.kpi.info .kpi-value { color: var(--blue);  }
 .kpi-sub { font-size: 11px; color: var(--text3); margin-top: 5px; line-height: 1.5; }
+.kpi.magenta { background: #e6165c; border: none; }
+.kpi.magenta .kpi-label { color: rgba(255,255,255,0.85); }
+.kpi.magenta .kpi-value { color: #ffffff; font-weight: 700; }
+.kpi.magenta .kpi-sub   { color: rgba(255,255,255,0.75); }
+.kpi.darkblue { background: #0f507b; border: none; }
+.kpi.darkblue .kpi-label { color: rgba(255,255,255,0.80); }
+.kpi.darkblue .kpi-value { color: #ffffff; font-weight: 700; }
+.kpi.darkblue .kpi-sub   { color: rgba(255,255,255,0.70); }
 
 /* ── SEZIONI ── */
-.sec { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px; margin-top: 28px; }
+.sec { font-size: 10px; font-weight: 600; color: #0f507b; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px; margin-top: 28px; }
 .sec:first-child { margin-top: 0; }
 hr.div { border: none; border-top: 1px solid var(--border); margin: 26px 0; }
 
 /* ── TABELLE ── */
 .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.data-table th { text-align: left; font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .07em; padding: 9px 10px; border-bottom: 2px solid var(--blue); background: var(--bg3); white-space: nowrap; }
+.data-table th { text-align: left; font-size: 10px; font-weight: 600; color: #ffffff; text-transform: uppercase; letter-spacing: .07em; padding: 9px 10px; border-bottom: none; background: #0f507b; white-space: nowrap; }
 .data-table td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
 .data-table tr:last-child td { border-bottom: none; }
 .data-table tr:hover td { background: rgba(255,255,255,.015); }
@@ -270,22 +272,22 @@ input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16p
   <div id="tab-marginalita" class="panel active">
 
     <div class="kpi-row c4">
-      <div class="kpi ok">
+      <div class="kpi magenta">
         <div class="kpi-label">Ricavo reale / contratto</div>
         <div class="kpi-value">€3.230</div>
         <div class="kpi-sub">Formazione Idoneità — tutti i percorsi</div>
       </div>
-      <div class="kpi">
+      <div class="kpi darkblue">
         <div class="kpi-label">Break-even mensile</div>
         <div class="kpi-value">€250.000</div>
         <div class="kpi-sub">Soglia minima fatturato formazione</div>
       </div>
-      <div class="kpi info">
+      <div class="kpi darkblue">
         <div class="kpi-label">Provv. dipendente (lordo az.)</div>
         <div class="kpi-value">€750</div>
         <div class="kpi-sub">Costo reale per contratto</div>
       </div>
-      <div class="kpi">
+      <div class="kpi darkblue">
         <div class="kpi-label">Provv. P.IVA (netto)</div>
         <div class="kpi-value">€300</div>
         <div class="kpi-sub">Costo reale per contratto</div>
